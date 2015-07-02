@@ -16,9 +16,9 @@ Please refer to the [INSTALL](INSTALL.md) guide.
 
 ## Troubleshooting
 
-####
+#### Error while loading the OpenCL plugin.
 
-If an error occurs while loading the OpenCL plugin, make sure your OpenCL dynamic library is in your path.
+Make sure your OpenCL dynamic library is in your path.
 If it's not the case, you have two options :
 
 - Add the OpenCL dynamic libraries directory to your path.
