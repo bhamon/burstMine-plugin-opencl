@@ -1,0 +1,17 @@
+<p>
+	The opencl generator use a native OpenCL binding to generate plots.
+	It is mainly intended to make an extensive use of your graphic cards computing capability.
+</p>
+<p>
+	The <code>platform</code> and <code>device</code> lists are retrieved from a direct OpenCL call.
+	Only compatible pieces of hardware will be listed.
+</p>
+<p>
+	The <code>globalWorkSize</code> parameter controls the amount of available memory used to generate plots.
+	You can see this memory amount on the bottom of the form.
+</p>
+<p>The <code>localWorkSize</code> parameter controls the "thread" numbers.</p>
+<p>
+	The <code>hashesNumber</code> parameter controls the number of hashes per OpenCL command (from 1 to 8192).
+	Reducing this factor reduces the stress on the rendering pipeline, especially for graphic cards bound to the display, preventing the display driver to crash.
+</p>

@@ -1,0 +1,58 @@
+<div class="modal-header">
+	<h3 class="modal-title">Device details</h3>
+</div>
+<div class="modal-body">
+	<form name="formView">
+		<div class="form-group">
+			<label class="control-label">Type</label>
+			<p class="form-control-static">{{device.type}}</p>
+		</div>
+		<div class="form-group">
+			<label class="control-label">Name</label>
+			<p class="form-control-static">{{device.name}}</p>
+		</div>
+		<div class="form-group">
+			<label class="control-label">Vendor</label>
+			<p class="form-control-static">{{device.vendor}}</p>
+		</div>
+		<div class="form-group">
+			<label class="control-label">Version</label>
+			<p class="form-control-static">{{device.version}}</p>
+		</div>
+		<div class="form-group">
+			<label class="control-label">Driver version</label>
+			<p class="form-control-static">{{device.driverVersion}}</p>
+		</div>
+		<div class="form-group">
+			<label class="control-label">Max compute units</label>
+			<p class="form-control-static">{{device.maxComputeUnits}}</p>
+		</div>
+		<div class="form-group">
+			<label class="control-label">Max clock frequency</label>
+			<p class="form-control-static">{{device.maxClockFrequency | unit:[1,1000]:['MHz', 'GHz']}}</p>
+		</div>
+		<div class="form-group">
+			<label class="control-label">Global memory size</label>
+			<p class="form-control-static">{{device.globalMemorySize | unit:[1,1024,1024,1024]:['B','KB','MB','GB']}}</p>
+		</div>
+		<div class="form-group">
+			<label class="control-label">Local memory size</label>
+			<p class="form-control-static">{{device.localMemorySize | unit:[1,1024,1024,1024]:['B','KB','MB','GB']}}</p>
+		</div>
+		<div class="form-group">
+			<label class="control-label">Max memory allocation size</label>
+			<p class="form-control-static">{{device.maxMemoryAllocationSize | unit:[1,1024,1024,1024]:['B','KB','MB','GB']}}</p>
+		</div>
+		<div class="form-group">
+			<label class="control-label">Max work group size</label>
+			<p class="form-control-static">{{device.maxWorkGroupSize}}</p>
+		</div>
+		<div class="form-group">
+			<label class="control-label">Max work item sizes</label>
+			<p class="form-control-static">{{device.maxWorkItemSizes}}</p>
+		</div>
+	</form>
+</div>
+<div class="modal-footer">
+	<button class="btn btn-primary" ng-click="close()">Close</button>
+</div>

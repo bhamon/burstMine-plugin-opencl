@@ -1,0 +1,21 @@
+{
+	"name":"burstMine-plugin-opencl",
+	"version":"1.0.0",
+	"description":"OpenCL core features",
+	"author":{
+		"name":"Cryo",
+		"url":"https://github.com/bhamon"
+	},
+	"license":"MIT",
+	"repository":{
+		"type":"git",
+		"url":"https://github.com/bhamon/burstMine-plugin-opencl.git"
+	},
+	"bugs":{
+		"url":"https://github.com/bhamon/burstMine-plugin-opencl/issues"
+	},
+	"engines":{
+		"node":"~0.10"
+	},
+	"main":"lib/index.js"
+}

@@ -1,0 +1,48 @@
+<alert ng-if="error" type="danger" close="clearError()">
+	<p>An error occured while retrieving platforms/devices.</p>
+	<p>
+		<span class="label label-danger">{{error.type}}</span>
+		{{error.message}}
+	</p>
+	<pre ng-if="error.details">{{error.details}}</pre>
+</alert>
+<ng-form name="formParams">
+	<div class="form-group" show-errors>
+		<label class="control-label">Platform</label>
+		<div class="input-group">
+			<select name="platform" class="form-control" ng-disabled="!platforms.length" ng-model="data.platform" ng-options="index as platform.name for (index, platform) in platforms" ng-change="loadDevices()" required></select>
+			<span class="input-group-btn">
+				<button class="btn btn-default" ng-disabled="!data.platform" ng-click="viewPlatform()"><span class="glyphicon glyphicon-new-window"></span></button>
+			</span>
+		</div>
+	</div>
+	<div class="form-group" show-errors>
+		<label class="control-label">Device</label>
+		<div class="input-group">
+			<select name="device" class="form-control" ng-disabled="!data.platform" ng-model="data.device" ng-options="index as device.name for (index, device) in devices" required></select>
+			<span class="input-group-btn">
+				<button class="btn btn-default" ng-disabled="!data.device" ng-click="viewDevice()"><span class="glyphicon glyphicon-new-window"></span></button>
+			</span>
+		</div>
+	</div>
+	<div class="form-group" show-errors>
+		<label class="control-label">Global work size</label>
+		<input type="number" name="globalWorkSize" class="form-control" ng-model="data.globalWorkSize" min="1" required>
+	</div>
+	<div class="form-group" show-errors>
+		<label class="control-label">Local work size</label>
+		<input type="number" name="localWorkSize" class="form-control" ng-model="data.localWorkSize" min="1" required>
+	</div>
+	<div class="form-group" show-errors>
+		<label class="control-label">Hashes number</label>
+		<input type="number" name="hashesNumber" class="form-control" ng-model="data.hashesNumber" min="1" max="8192" required>
+	</div>
+	<div class="form-group">
+		<label class="control-label">GPU memory</label>
+		<p class="form-control-static">{{data.globalWorkSize * (4096 * 64 + 16) | unit:[1,1024,1024,1024]:['B','KB','MB','GB']}}</p>
+	</div>
+	<div class="form-group">
+		<label class="control-label">CPU memory</label>
+		<p class="form-control-static">{{data.globalWorkSize * 4096 * 64 | unit:[1,1024,1024,1024]:['B','KB','MB','GB']}}</p>
+	</div>
+</ng-form>
