@@ -6,35 +6,33 @@
 	</p>
 	<pre ng-if="error.details">{{error.details}}</pre>
 </alert>
-<ng-form name="formParams">
-	<div class="form-group">
-		<label class="control-label">Platform</label>
-		<div class="input-group">
-			<p class="form-control-static">{{platform.name}}</p>
-			<span class="input-group-btn">
-				<button class="btn btn-default" ng-click="viewPlatform()"><span class="glyphicon glyphicon-new-window"></span></button>
-			</span>
-		</div>
+<div class="form-group">
+	<label class="control-label">Platform</label>
+	<div class="input-group">
+		<p class="form-control-static">{{platform.name}}</p>
+		<span class="input-group-btn">
+			<button class="btn btn-default" ng-click="viewPlatform()"><span class="glyphicon glyphicon-new-window"></span></button>
+		</span>
 	</div>
-	<div class="form-group">
-		<label class="control-label">Device</label>
-		<div class="input-group">
-			<p class="form-control-static">{{device.name}}</p>
-			<span class="input-group-btn">
-				<button class="btn btn-default" ng-click="viewPlatform()"><span class="glyphicon glyphicon-new-window"></span></button>
-			</span>
-		</div>
+</div>
+<div class="form-group">
+	<label class="control-label">Device</label>
+	<div class="input-group">
+		<p class="form-control-static">{{device.name}}</p>
+		<span class="input-group-btn">
+			<button class="btn btn-default" ng-click="viewPlatform()"><span class="glyphicon glyphicon-new-window"></span></button>
+		</span>
 	</div>
-	<div class="form-group">
-		<label class="control-label">Global work size</label>
-		<p class="form-control-static">{{generator.globalWorkSize}}</p>
-	</div>
-	<div class="form-group">
-		<label class="control-label">Local work size</label>
-		<p class="form-control-static">{{generator.localWorkSize}}</p>
-	</div>
-	<div class="form-group">
-		<label class="control-label">Hashes number</label>
-		<p class="form-control-static">{{generator.hashesNumber}}</p>
-	</div>
-</ng-form>
+</div>
+<div class="form-group">
+	<label class="control-label">Global work size</label>
+	<p class="form-control-static">{{generator.globalWorkSize}}</p>
+</div>
+<div class="form-group">
+	<label class="control-label">Local work size</label>
+	<p class="form-control-static">{{generator.localWorkSize}}</p>
+</div>
+<div class="form-group">
+	<label class="control-label">Hashes number</label>
+	<p class="form-control-static">{{generator.hashesNumber}}</p>
+</div>
